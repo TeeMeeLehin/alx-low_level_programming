@@ -22,18 +22,17 @@ int last_digit;
 srand(time(0)); /* Set the seed for the random number generator */
 n = rand(); /* Generate a random number */
 last_digit = n % 10; /* Extract the last digit of the number */
-printf("Last digit of %d is ", n);
 if (last_digit > 5)
 {
-printf("%d and is greater than 5\n", last_digit);
+printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
 }
 else if (last_digit == 0)
 {
-printf("%d and is 0\n", last_digit);
+printf("Last digit of %d is %d and is 0\n", n, last_digit);
 }
 else
 {
-printf("%d and is less than 6 and not 0\n", last_digit);
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_digit);
 }
 return (0);
 }

@@ -8,21 +8,17 @@
  */
 int is_p(int n, int test)
 {
-if (test > n)
+if (test == n)
 {
 return (1);
 }
-else if (n != test && (n % test) > 0)
-{
-return (is_p(n, test + 1));
-}
-else if (n != test && n % test == 0)
+else if (n != test && (n % test) == 0)
 {
 return (0);
 }
 else
 {
-return (1)
+return (is_p(n, test + 1));
 }
 }
 /**
@@ -34,11 +30,11 @@ return (1)
 int _is_prime_number(int n)
 {
 int test = 2;
-if (n == 1)
+if (n <= 2)
 {
-return (0);
+return (n == 2 ? 1 : 0);
 }
-if (n != test && (n % test) == 0)
+if (n % test == 0)
 {
 return (0);
 }

@@ -6,20 +6,13 @@
  * @test: test number
  * Return: int
  */
-int is_p(int n, int test)
+int is_prime(int n, int i)
 {
-if (test == n)
-{
-return (1);
-}
-else if (n != test && (n % test) == 0)
-{
-return (0);
-}
-else
-{
-return (is_p(n, test + 1));
-}
+	if (n != i && n % i == 0)
+		return (0);
+	else if (n == i)
+		return (1);
+	return (is_prime(n, i + 1));
 }
 /**
  * _is_prime_number - function to check whether it's a prime number or not
@@ -27,19 +20,13 @@ return (is_p(n, test + 1));
  * @n: number
  * Return: int
  */
-int _is_prime_number(int n)
+int is_prime_number(int n)
 {
-int test = 2;
-if (n <= 2)
-{
-return (n == 2 ? 1 : 0);
-}
-if (n % test == 0)
-{
-return (0);
-}
-else
-{
-return (is_p(n, test));
-}
+	int i = 2;
+
+	if (n <= 2)
+		return (n == 2 ? 1 : 0);
+	if (n % 2 == 0)
+		return (0);
+	return (is_prime(n, i));
 }

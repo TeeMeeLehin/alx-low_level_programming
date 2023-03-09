@@ -20,6 +20,6 @@ return (res);
 }
 else
 {
-return (x);
+return (1);
 }
 }

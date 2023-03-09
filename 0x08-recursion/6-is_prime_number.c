@@ -20,6 +20,10 @@ else if (n != test && n % test == 0)
 {
 return (0);
 }
+else
+{
+return (1)
+}
 }
 /**
  * _is_prime_number - function to check whether it's a prime number or not

@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * is_p - function to check whether it's a prime number or not
+ * is_prime - function to check whether it's a prime number or not
  *
  * @n: number
- * @test: test number
+ * @i: test number
  * Return: int
  */
 int is_prime(int n, int i)
@@ -15,7 +15,7 @@ int is_prime(int n, int i)
 	return (is_prime(n, i + 1));
 }
 /**
- * _is_prime_number - function to check whether it's a prime number or not
+ * is_prime_number - function to check whether it's a prime number or not
  *
  * @n: number
  * Return: int

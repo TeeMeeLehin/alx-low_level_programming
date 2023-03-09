@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * _print_rev_recursion - Prints a string in reverse, followed by a new line using recursion
+ * _print_rev_recursion - Prints a string in reverse,
+ *followed by a new line using recursion
  * @s: The string to be printed
  *
  * Return: void
@@ -11,10 +12,6 @@ if (*s != '\0')
 {
 _print_rev_recursion(s + 1);
 putchar(*s);
-}
-else
-{
-putchar('\n');
 }
 }
 

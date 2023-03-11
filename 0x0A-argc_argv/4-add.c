@@ -14,14 +14,18 @@ printf("%d\n", 0);
 }
 else
 {
-int i, sum = 0;
+int i, j, sum = 0;
 for (i = 1; i < argc; i++)
 {
-if (!isdigit(argv[i]))
+for (j = 0; argv[i][j] != '\0'; j++)
+{
+if (!isdigit(argv[i][j]))
 {
 printf("Error\n");
 return (1);
+i = j = 1000;
 break;
+}
 }
 sum += atoi(argv[i]);
 }

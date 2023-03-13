@@ -14,7 +14,9 @@ if (size == 0)
 return (NULL);
 }
 char *str;
+char *ptr;
 str = malloc(sizeof(char) * size);
 str[0] = c;
-return (*str);
+ptr = &str;
+return (ptr);
 }

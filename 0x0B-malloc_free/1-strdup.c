@@ -29,6 +29,10 @@ if (str == NULL)
 {
 return (NULL);
 }
+if (*str == '\0')
+{
+return (NULL);
+}
 if (*str != '\0')
 {
 lent = get_len(str);

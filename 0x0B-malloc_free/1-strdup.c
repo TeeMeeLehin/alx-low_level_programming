@@ -29,20 +29,15 @@ if (str == NULL)
 {
 return (NULL);
 }
-if (*str == '\0')
-{
-return (NULL);
-}
 if (*str != '\0')
 {
 lent = get_len(str);
-new_str = malloc(sizeof(char) * lent);
+new_str = malloc((sizeof(char) * lent) +1);
 for (i = 0; i < lent; i++)
 {
 *(new_str + i) = *(str + i);
 }
 return (new_str);
-free(new_str);
 }
 return (NULL);
 }

@@ -24,7 +24,7 @@ return (len);
  */
 char *str_concat(char *s1, char *s2)
 {
-int lent, i, j, k = 0;
+int lent1, lent2, i, j, k = 0;
 char *new_str;
 lent1 = get_len(s1);
 lent2 = get_len(s2);

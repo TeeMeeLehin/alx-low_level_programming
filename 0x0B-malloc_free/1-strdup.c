@@ -25,6 +25,10 @@ char *_strdup(char *str)
 {
 int lent, i;
 char *new_str;
+if (str == NULL)
+{
+return (NULL);
+}
 if (*str != '\0')
 {
 lent = get_len(str);
@@ -34,6 +38,7 @@ for (i = 0; i < lent; i++)
 *(new_str + i) = *(str + i);
 }
 return (new_str);
+free(new_str);
 }
 return (NULL);
 }

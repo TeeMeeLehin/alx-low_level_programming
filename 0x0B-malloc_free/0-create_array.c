@@ -15,6 +15,9 @@ if (size == 0)
 return (NULL);
 }
 str = malloc(sizeof(char) * size);
-str[0] = c;
+for (i = 0; i < size; i++)
+{
+str[i] = c;
+}
 return (str);
 }

@@ -24,15 +24,15 @@ return (len);
  */
 char *str_concat(char *s1, char *s2)
 {
-if (*s1 == NULL)
+int lent1, lent2, i, j, k = 0;
+if (s1 == NULL)
 {
 *s1 = '\0';
 }
-if (*s2 == NULL)
+if (s2 == NULL)
 {
 *s2 = '\0';
 }
-int lent1, lent2, i, j, k = 0;
 char *new_str;
 lent1 = get_len(s1);
 lent2 = get_len(s2);

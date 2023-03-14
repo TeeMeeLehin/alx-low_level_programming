@@ -10,7 +10,7 @@ int get_len(char *str)
 int i, len;
 i = 0;
 len = 0;
-while (str[i] != "\0")
+while (*str[i] != "\0")
 {
 len += 1;
 }
@@ -26,7 +26,7 @@ char *_strdup(char *str)
 {
 int lent, i;
 char *new_str;
-if (str != "\0")
+if (*str != "\0")
 {
 lent = get_len(str);
 new_str = malloc(sizeof(char) * lent);

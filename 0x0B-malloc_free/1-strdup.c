@@ -7,12 +7,11 @@
  */
 int get_len(char *str)
 {
-int i, len;
-i = 0;
-len = 0;
-while (*str[i] != "\0")
+int len = 0;
+while (*str != '\0')
 {
-len += 1;
+len++;
+str++;
 }
 return (len);
 }
@@ -26,13 +25,13 @@ char *_strdup(char *str)
 {
 int lent, i;
 char *new_str;
-if (*str != "\0")
+if (*str != '\0')
 {
 lent = get_len(str);
 new_str = malloc(sizeof(char) * lent);
 for (i = 0; i < lent; i++)
 {
-new_str[i] = str[i];
+*(new_str + i) = *(str + i);
 }
 return (new_str);
 }

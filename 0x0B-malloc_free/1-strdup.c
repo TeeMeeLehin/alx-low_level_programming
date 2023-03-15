@@ -33,6 +33,10 @@ if (*str != '\0')
 {
 lent = get_len(str);
 new_str = malloc((sizeof(char) * lent) +1);
+if (new_str == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < lent; i++)
 {
 *(new_str + i) = *(str + i);

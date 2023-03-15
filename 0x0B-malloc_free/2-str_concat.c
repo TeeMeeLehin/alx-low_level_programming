@@ -26,11 +26,6 @@ char *str_concat(char *s1, char *s2)
 {
 int lent1, lent2, i, j, k = 0;
 char *new_str;
-if (s1 == NULL && s2 == NULL)
-{
-*new_str = '\0';
-return (new_str);
-}
 lent1 = get_len(s1);
 lent2 = get_len(s2);
 new_str = malloc((sizeof(char) * lent1) +(sizeof(char) * lent2) +1);

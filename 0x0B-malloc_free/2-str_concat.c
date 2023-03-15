@@ -28,7 +28,7 @@ int lent1, lent2, i, j, k = 0;
 char *new_str;
 if (s1 == NULL && s2 == NULL)
 {
-new_str[0] = '\0';
+*new_str = '\0';
 return (new_str);
 }
 lent1 = get_len(s1);

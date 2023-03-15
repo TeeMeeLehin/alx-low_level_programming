@@ -41,6 +41,7 @@ for (i = 0; i < lent; i++)
 {
 *(new_str + i) = *(str + i);
 }
+new_str[lent] = '\0';
 return (new_str);
 }
 return (NULL);

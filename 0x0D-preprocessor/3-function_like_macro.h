@@ -1,3 +1,3 @@
 #ifndef ABS
 #define ABS(X) ((X) > (1) ? (X) : (-X))
-#endif
+#endif /*function for macros*/

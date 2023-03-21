@@ -1,9 +1,17 @@
-#include "3-function_like_macro.h"
 #include <stdio.h>
+#include "4-sum.h"
+#include "4-sum.h"
 
-int main(void){
-  int res, i = 98;
-  res = ABS(i);
-  printf("%d\n", res);
-  return (0);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int s;
+
+    s = SUM(98, 1024);
+    printf("%d\n", s);
+    return (0);
 }

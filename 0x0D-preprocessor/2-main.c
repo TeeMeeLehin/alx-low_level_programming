@@ -2,9 +2,9 @@
 #define filename __FILE__
 /**
 * main - the main function to print filename
-* return - 0
+* Return: void
 */
-int main()
+int main(void)
 {
 printf("%s\n", filename);
 return (0);

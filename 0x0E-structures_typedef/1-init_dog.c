@@ -9,9 +9,9 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-if (d == NULL || d == '\0')
+if (d == 0)
 {
-return (NULL);
+return;
 }
 d->name = name;
 d->age = age;

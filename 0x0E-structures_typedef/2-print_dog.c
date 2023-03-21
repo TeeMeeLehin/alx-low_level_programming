@@ -1,5 +1,8 @@
 #include "dog.h"
 #include <stdio.h>
+
+#include <stddef.h>
+
 /**
 * print_dog - print given instance of dog struct
 * @d: given instance of a dog class
@@ -7,7 +10,7 @@
 
 void print_dog(struct dog *d)
 {
-if (d == 0)
+if (d == NULL)
 {
 return;
 }

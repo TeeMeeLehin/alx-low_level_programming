@@ -19,9 +19,10 @@ if (cmp(array[i]) != 0)
 {
 res = i;
 break;
-};
+}
+res = -1;
 }
 return (res);
 }
-return (0);
+return (-1);
 }

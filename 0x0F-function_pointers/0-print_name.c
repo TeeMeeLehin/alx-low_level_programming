@@ -1,3 +1,4 @@
+#include "function_pointers.h"
 /**
 * print_name - callback function to print given name
 * @name: name char

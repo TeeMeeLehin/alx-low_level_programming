@@ -22,7 +22,7 @@ printf("%s", separator);
 }
 if (str == NULL)
 {
-printf("(nill)");
+printf("(nil)");
 }
 else
 {

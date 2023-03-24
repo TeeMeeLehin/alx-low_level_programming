@@ -29,7 +29,3 @@ int (*get_op_func(char *s))(int, int)
 	}
 	return (NULL);
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms

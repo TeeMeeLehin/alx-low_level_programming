@@ -9,6 +9,12 @@
 
 void free_listint2(listint_t **head)
 {
+if (!head)
+{
+return;
+}
+else
+{
 listint_t *current;
 while (*head)
 {
@@ -17,4 +23,5 @@ current = *head;
 free(current);
 }
 *head = NULL;
+};
 }

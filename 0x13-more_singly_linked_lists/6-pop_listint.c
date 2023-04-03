@@ -9,6 +9,8 @@
 
 int pop_listint(listint_t **head)
 {
+if (*head)
+{
 int data;
 listint_t *current;
 data = (*head)->n;
@@ -16,4 +18,9 @@ current = *head;
 *head = (*head)->next;
 free(current);
 return (data);
+}
+else
+{
+return (0);
+}
 }

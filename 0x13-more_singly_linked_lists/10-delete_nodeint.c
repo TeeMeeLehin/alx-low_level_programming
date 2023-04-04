@@ -34,24 +34,27 @@ return (0);
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-listint_t *temp, **current = head;
+listint_t *prev, *next, *temp;
 unsigned int count = 0;
 if (index == 0)
 {
 pop_listint(head);
 return (1);
 }
-while (*current && count < index - 1)
+temp = *head;
+while (index > count + 1)
 {
-current = &(*current)->next;
+temp = temp->next;
 count++;
 }
-if (!*current || !(*current)->next)
+if (!temp)
 {
 return (-1);
 }
-temp = *current;
-*current = (*current)->next;
+prev = temp;
+temp = prev->next;
+next = temp->next;
+prev->next = next;
 free(temp);
 return (1);
 }

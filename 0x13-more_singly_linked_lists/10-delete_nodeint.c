@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+
 /**
 * pop_listint - function to free a linked list
 * @head: the linked list
@@ -23,6 +24,7 @@ else
 return (0);
 }
 }
+
 /**
 * delete_nodeint_at_index - function to delete node at given index
 * @head: the linked list
@@ -32,27 +34,25 @@ return (0);
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-listint_t *prev, *next, *temp;
+listint_t *temp, **current = head;
 unsigned int count = 0;
 if (index == 0)
 {
 pop_listint(head);
 return (1);
 }
-temp = *head;
-while (index > count + 1)
+while (*current && count < index - 1)
 {
-temp = temp->next;
+current = &(*current)->next;
 count++;
 }
-if (!temp)
+if (!*current || !(*current)->next)
 {
 return (-1);
 }
-prev = temp;
-temp = prev->next;
-next = temp->next;
-prev->next = next;
+temp = *current;
+*current = (*current)->next;
 free(temp);
 return (1);
 }
+

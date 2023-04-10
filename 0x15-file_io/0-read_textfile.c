@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "main.h"
-
+#include <fcntl.h>
 /**
  * _putchar - writes a character to the standard output
  * @c: the character to write
@@ -23,20 +23,20 @@ return (write(1, &c, 1));
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-FILE *fp = fopen(filename, "r");
+int fp = open(filename, O_RDONLY);
 size_t n, count = 0;
 char buffer[BUFSIZ];
-if (fp == NULL || filename == NULL)
+if (fp == -1 || filename == NULL)
 {
 return (0);
 }
-while ((n = fread(buffer, 1, sizeof(buffer), fp)) > 0 && count < letters)
+while ((n = read(fp, buffer, sizeof(buffer))) > 0 && count < letters)
 {
 if ((count + n) > letters)
 {
 n = letters - count;
 }
-count += fwrite(buffer, 1, n, stdout);
+count += write(1, buffer, n);
 }
 return (count);
 }

@@ -7,8 +7,9 @@
 */
 void print_binary(unsigned long int n)
 {
-unsigned int checker = 2147483648, flag = 0;
-while (checker != 0)
+unsigned long int checker = 2147483648;
+int flag = 0;
+while (checker)
 {
 if (n & checker)
 {

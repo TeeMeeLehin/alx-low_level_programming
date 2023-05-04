@@ -7,7 +7,7 @@
 */
 void print_binary(unsigned long int n)
 {
-unsigned long int checker = 1UL << 31;
+unsigned long int checker = 1UL << (sizeof(n) * 8 - 1);
 int flag = 0;
 while (checker)
 {

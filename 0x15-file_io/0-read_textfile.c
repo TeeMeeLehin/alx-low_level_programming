@@ -25,5 +25,6 @@ if (fp == -1 || n == -1 || count == -1 || n != count)
 free(buffer);
 return (0);
 }
+free(buffer);
 return (count);
 }

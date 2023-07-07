@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash - implementation of the djb2 algorithm
+ * hash_djb2 - implementation of the djb2 algorithm
  * @str: string used to generate hash value
  *
  * Return: hash value
@@ -15,20 +15,7 @@ int c;
 hash = 5381;
 while ((c = *str++))
 {
-hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+hash = ((hash << 5) + hash) +c;
 }
 return (hash);
-}
-
-int main(void)
-{
-    char *s;
-
-    s = "cisfun";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    s = "Don't forget to tweet today";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    s = "98";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    return (EXIT_SUCCESS);
 }

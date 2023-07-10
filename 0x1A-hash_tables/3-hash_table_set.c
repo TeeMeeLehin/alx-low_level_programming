@@ -26,7 +26,7 @@ return (0);
 
 item->key = strdup(key);
 item->value = strdup(value);
-item->next = NULL:
+item->next = NULL;
 
 if (ht->array[index] == NULL)
 {
